@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .has-logo {
+        background-color: yellow;
+        height: 75px;
+    }
+    .logo {
+        width: 185px;
+        height: 75px;
+    }
+    .left-info {
+        width: 200px;
+    }
+</style>
+
+
+<body>
+    <header>
+        <h1 class="has-logo">
+            <a href="home.html">
+                <img class="logo" src="./img/kba.png">
+            </a>
+        </h1>
+    </header>
+
+    <div class="left-info">
+        <h2>
+            <a href="https://lol.inven.co.kr/" title="메인 페이지로 이동">리그오브레전드 인벤</a>
+        </h2>
+    
+            <div class="log-out">
+            <p>로그인하고<br><span class="color">출석보상</span> 받으세요!</p>
+            <a href="https://lol.inven.co.kr/#" onclick="login(); return false;" class="login-btn">
+                로그인        </a>
+    
+                    <div>
+                <a href="https://member.inven.co.kr/user/pro/join" onclick="return onclickHref(event, window.INVEN.Links.signIn);">회원가입</a>
+                <a href="https://member.inven.co.kr/user/scorpio/find/info" onclick="return onclickHref(event, window.INVEN.Links.findIdPw);">ID/PW 찾기</a>
+            </div>
+                </div>
+        </div><div class="search" id="__left-search">
+        <form action="https://www.inven.co.kr/search" method="GET">
+            <input type="text" name="keyword" placeholder="LoL 인벤 통합검색">
+            <button type="submit">검색</button>
+        </form>
+    </div>
+    
+</body>
+</html>
