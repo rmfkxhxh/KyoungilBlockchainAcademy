@@ -1,0 +1,121 @@
+.logo-header {
+    /* background-color: yellow; */
+    height: 150px;
+    position: relative;
+    top: 0px;
+    border: 2px solid black;
+}
+.logo {
+    display: block;
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    border: 2px solid black;
+}
+.left-info {
+    top: 200px;
+    margin-top: 1em;
+    width: 250px;
+    float: left;
+    /* background: red; */
+    position: absolute;
+    border: 2px solid black;
+    
+}
+.left-link {
+    font-size: 20px;
+    /* position: absolute; */
+    border: 2px solid black;
+}        
+        
+        
+        
+#slider {
+position: relative;
+left: 250px;
+margin: 1em 1em 2em 10em;
+width: 960px;
+overflow: hidden;
+border: 2px solid black;
+
+}
+
+#slider-wrapper {
+    width: 9999px;
+    height: 600px;
+    position: relative;
+    transition: left 600ms linear;
+    border: 2px solid black;
+}
+
+.slide {
+    float: left;
+    width: 960px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+}
+
+.caption {
+    margin: 0;
+    position: absolute;
+    z-index: 100;
+    bottom: -2em;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    line-height: 2;
+    text-align: center;
+    background: rgba( 0, 0, 0, 0.6 );
+    color: #fff;
+    transition: bottom 500ms ease-in;
+    border: 2px solid black;
+}
+.caption.visible {
+    bottom: 0;
+    border: 2px solid black;
+}
+
+#slider-nav {
+    margin: 1em 0;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#slider-nav a {
+    width: 2em;
+    height: 2em;
+    border: 1px solid #ccc;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    line-height: 2;
+    margin-right: 0.5em;
+    border: 2px solid black;
+}
+
+#slider-nav a.current {
+    border-color: #000;
+    border: 2px solid black;
+}
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+border: 2px solid black;
+}
