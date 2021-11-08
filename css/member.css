@@ -112,14 +112,16 @@ header {
 
 /*-----------------------------register---------------------------------*/
 #regi {
-    margin: 350px;
+    /* margin-left: 1%; */
+    white-space: nowrap;
 }
 .step {
-    left: 150px;
-    position: relative;
+    margin-left: 350px;
+    /* margin-left: 50%; */
+    position: center;
     border: 2px solid black;
     width: 350px;
     height: 650px;
     background-color: khaki;
-    margin: auto;
+    /* margin: auto; */
 }
