@@ -43,9 +43,9 @@ li a:hover {
 background-color: #111111;
 
 }
-.logo-header {
-    /* background-color: yellow; */
-}
+/* .logo-header {
+    background-color: yellow;
+} */
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -95,7 +95,6 @@ width: 250px;
 height: 120px;
 border: 2px solid skyblue;
 margin-left: 20px;
-position: fixed;
 float: left;
 }
 .left-link {
