@@ -132,5 +132,19 @@
           </form>
         
     </div>
+
+    <script>
+        // placeholder 값을 mystorage로 보내기
+
+        var el = document.getElementByName("user_ID");
+        var placeholder = el.getAttribute("placeholder");
+
+        myStorage = window.localStorage;
+        localStorage.setItem('myCat', 'Tom');
+        const cat = localStorage.getItem('myCat');
+        localStorage.removeItem('myCat');
+        console.log(placeholder)
+
+    </script>
 </body>
 </html>
