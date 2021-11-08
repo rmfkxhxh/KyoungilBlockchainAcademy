@@ -2,7 +2,7 @@ body {
     overflow: auto;
 }
 
-a:hover {
+#login:hover {
     color: blue;
 }
 
@@ -16,9 +16,9 @@ a:hover {
 #tel1 { /*button 형식의 tel mark*/
     position: absolute;
     width: 5%;
-    height: 7%;
+    height: 6%;
     right: 17%;
-    top: 5%;
+    top: 6%;
 }
 
 #login{
@@ -31,10 +31,9 @@ a:hover {
 
 #address {
     position: absolute;
-    right: 23%;
+    right: 25%;
     top: 0.2%;
     font-size: 70%;
-    text-align: center;
 }
 
 #logo {
@@ -79,11 +78,17 @@ a:hover {
 
 .img{ /*강의실 사진 있는 곳*/
     display: block;
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
+    width: 99%;
+    height: 70%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* justify-content: flex-start; */
+    background-color: #1383ce;
+    opacity: 0.7;
+    border: 1px outset black;
+    top: 0%;
+    margin-bottom: 5%;
+    border-radius: 3%;
 }
 
 /* body {
@@ -98,12 +103,12 @@ a:hover {
 
 #main-container {
     width: 65%;
-    height: 15%;
+    height: 30%;
     /* background-color: violet; */
     /* border: 2px solid purple; */
     display: flex;
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
     left: 17%;
     justify-content: space-between;
 }
@@ -119,11 +124,22 @@ a:hover {
     /* background-color: yellow; */
     align-items: center; /*안에 내용물 가운데 정렬*/
     display: flex;
+    /* justify-content: space-between; */
 }
+
+#test {
+    /* background-color: darkred; */
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    color: black;
+    font-weight: 600;
+}
+
 
 #txt-container{
     width: 65%;
-    height: 10%;
+    height: 13%;
     position: absolute;
     /* background-color: yellow; */
     display: flex;
@@ -131,7 +147,8 @@ a:hover {
     left: 17%;
     text-align: center;
     /* align-items: center; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+
 }
 .text {
     /* border: 1px solid black; */
