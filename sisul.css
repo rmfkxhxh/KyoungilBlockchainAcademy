@@ -125,7 +125,7 @@ border: 2px solid whitesmoke;
 }
 
 #slider-wrapper {
-    width: px;
+    width: 9999px;
     height: 600px;
     position: relative;
     transition: left 600ms linear;
