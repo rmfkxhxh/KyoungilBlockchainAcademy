@@ -46,33 +46,33 @@ header {
 }
 /*----------------------------------------login-----------------------------*/
 .login {
-width: 250px;
-height: 120px;
-border: 2px solid skyblue;
-margin-left: 20px;
-position: fixed;
-float: left;
+    width: 250px;
+    height: 120px;
+    border: 2px solid skyblue;
+    margin-left: 20px;
+    position: fixed;
+    float: left;
 }
 
 .lgi {
     width: 100px;
     margin: 5px;
 }
-/*---------------------------------------sldie-----------------------------*/
+/*---------------------------------------slide-----------------------------*/
 
 #slider {
-position: fixed;
-left: 265px;
-margin-left: 4%;
-width: 960px;
-overflow: hidden;
-border: 2px solid whitesmoke;
-/* float: left; */
+    position: fixed;
+    left: 265px;
+    margin-left: 4%;
+    width: 960px;
+    overflow: hidden;
+    border: 2px solid whitesmoke;
+    /* float: left; */
 
 }
 
 #slider-wrapper {
-    width: 4800px;
+    width: 9999px;
     height: 600px;
     position: relative;
     transition: left 600ms linear;
