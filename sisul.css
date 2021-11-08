@@ -4,9 +4,9 @@
     margin: 0 auto;
     overflow: hidden;
     vertical-align: top;
-    상자 크기 : 테두리 상자 ;
-    테두리 : 2px 단색 검정색 ;  ㅁㄴ
-    높이 : 250p;
+    box-sizing: border-box;
+    border : 2px solid black;
+    height : 250p;
     background-color: #333333
 }
 .nav-container {
@@ -91,12 +91,12 @@ header {
 }
 /*----------------------------------------login-----------------------------*/
 .login {
-    width: 250px;
-    height: 120px;
-    border: 2px solid skyblue;
-    margin-left: 20px;
-    position: fixed;
-    float: left;
+width: 250px;
+height: 120px;
+border: 2px solid skyblue;
+margin-left: 20px;
+position: fixed;
+float: left;
 }
 .left-link {
     font-size: 20px;
@@ -111,22 +111,22 @@ header {
     width: 100px;
     margin: 5px;
 }
-/*---------------------------------------slide-----------------------------*/
+/*---------------------------------------sldie-----------------------------*/
 
 
 #slider {
-    position: fixed;
-    left: 265px;
-    margin-left: 4%;
-    width: 960px;
-    overflow: hidden;
-    border: 2px solid whitesmoke;
-    /* float: left; */
+position: fixed;
+left: 265px;
+margin-left: 4%;
+width: 960px;
+overflow: hidden;
+border: 2px solid whitesmoke;
+/* float: left; */
 
 }
 
 #slider-wrapper {
-    width: 9999px;
+    width: px;
     height: 600px;
     position: relative;
     transition: left 600ms linear;
