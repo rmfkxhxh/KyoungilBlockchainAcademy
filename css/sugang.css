@@ -87,9 +87,7 @@ header {
     text-decoration: none;
     color: white;
 }
-.nav-item:nth-child(1) {
-    background-color: rgb(82, 184, 224);
-}
+
 .nav-item:hover {
     background-color: rgb(82, 184, 224);
 }
