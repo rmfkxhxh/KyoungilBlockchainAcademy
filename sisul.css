@@ -1,10 +1,10 @@
 .head-container {
-    width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     vertical-align: top;
     box-sizing: border-box;
     border: 2px solid black;
+    height: 250px;
 }
 .nav-head {
     float: right;
