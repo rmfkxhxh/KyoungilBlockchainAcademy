@@ -6,7 +6,7 @@
     vertical-align: top;
     box-sizing: border-box;
     border : 2px solid black;
-    height : 250p;
+    height : 250px;
     background-color: #333333
 }
 .nav-container {
@@ -21,28 +21,28 @@
 }
 
 .nav-head {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .nav-content {
-float: left;
+    float: left;
 }
 
 li a {
-display: block;
-color: white;
-text-align: center;
-padding: 30px;
-text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
 }
-
+/* 
 li a:hover {
 background-color: #111111;
 
-}
+} */
 /* .logo-header {
     background-color: yellow;
 } */
@@ -62,11 +62,11 @@ background-color: #111111;
 .nav-item a {
     text-align: center;
     text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
     color: white;
 }
-.nav-item:nth-child(1) {
-    background-color: rgb(82, 184, 224);
-}
+
 .nav-item:hover {
     background-color: rgb(82, 184, 224);
 }
@@ -91,11 +91,11 @@ header {
 }
 /*----------------------------------------login-----------------------------*/
 .login {
-width: 250px;
-height: 120px;
-border: 2px solid skyblue;
-margin-left: 20px;
-float: left;
+    width: 250px;
+    height: 120px;
+    border: 2px solid skyblue;
+    margin-left: 20px;
+    float: left;
 }
 .left-link {
     font-size: 20px;
@@ -114,12 +114,12 @@ float: left;
 
 
 #slider {
-position: fixed;
-left: 265px;
-margin-left: 4%;
-width: 960px;
-overflow: hidden;
-border: 2px solid whitesmoke;
+    position: fixed;
+    left: 265px;
+    margin-left: 4%;
+    width: 960px;
+    overflow: hidden;
+    border: 2px solid whitesmoke;
 /* float: left; */
 
 }
