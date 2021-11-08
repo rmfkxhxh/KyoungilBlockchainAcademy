@@ -177,3 +177,7 @@ body {
     left: 17%;
     justify-content: center;
 }
+
+.img-container:hover {
+    cursor: pointer;
+}
