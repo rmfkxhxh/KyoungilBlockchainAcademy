@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME PAGE</title>
+    <link rel="stylesheet" href="./sky.css" type="text/css"> 
 </head>
 <body>
-    <div id="main"><img src="./KYlogo.png" width="600px" height="300px"></div>
+    <div class="container">
+        <div id="main"><img src="./KYlogo.png"></div>
+    <!-- <form action="./로그인.html"> -->
+    <!-- 배경화면 이미지 주소 https://pixabay.com/  -->
+        <div type="button" id="home" onclick="location.href= './로그인.html'"><h1>홈페이지 바로가기</h1></div>
+        <div id="main-container">
+            <div class="menu-container"><h2>강의실</h2></div>
+            <div class="menu-container"><h2>교육과정 및 수강신청</h2></div>
+            <div class="menu-container"><h2>시설소개</h2></div>
+            <div class="menu-container"><h2>Q&A</h2></div>
+        </div>
+    </div>
     <script>
-        localStorage.setItem("sky", "password");
-        let tmp = localStorage.getItem("sky");
-        console.log(tmp);
-
     </script>
 </body>
 </html>
