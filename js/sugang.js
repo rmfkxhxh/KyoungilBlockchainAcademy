@@ -1,5 +1,6 @@
 let ref = document.location.href.split('/');
 let tmp = ref.pop();
+//s
 // console.log(tmp);
 // console.log(tmp=="sisul.html");
 // console.log(tmp=="sugang.html");
