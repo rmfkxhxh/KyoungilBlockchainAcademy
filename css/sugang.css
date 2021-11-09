@@ -114,9 +114,7 @@ header {
     text-decoration: none;
     color: white;
 }
-/* .nav-item:nth-child() {
-    background-color: rgb(82, 184, 224);
-} */
+
 .nav-item:hover {
     background-color: rgb(82, 184, 224);
     cursor: pointer;
