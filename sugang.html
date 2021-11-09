@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/sugang.css" type="text/css">
     <!-- <link type="text/css" rel="stylesheet" href="/sisul.css"> -->
     <link type="text/css" rel="stylesheet" href="/css/common.css">
+
     <script src="/js/sisul.js"></script>  
     <script src="/js/sugang.js"></script>
     <style>
@@ -17,6 +18,7 @@
     </style>  
 </head>
 <body>
+    <!-- 1 -->
         <header class="Heds">
                 <nav>
                     <a href="homepage.html"> <img class="logo" src="/img/kba.png"></a>
@@ -34,16 +36,19 @@
     <a style="margin: auto;">
     <div class="login">    
         <div>
-            <button type="button" onclick="location.href='./login.html'" style="float: right; margin-right: 2%; margin-top: 6%; padding-top: 6%; padding-bottom: 6%; background-color: lightskyblue;border: 1px solid green;">로그인</button>
-            <label for="id" style="margin-left: 2%; font-size: 90%;">아이디</label><input type="text" class="lgi" style="margin-top: 6%; margin-left: 8%;">
-            <lebel for="password" style="margin-left: 2%; font-size: 90%;">패스워드</lebel><input type="password" class="lgi">
+            <button type="button" id="loginbtn" onclick="location.href='./login.html'" style="float: right; margin-right: 2%; margin-top: 20%; padding-top: 6%; padding-bottom: 6%; background-color: lightskyblue;border: 1px solid green;">로그인</button>
+            <label for="id" style="margin-left: 2%; font-size: 80%;">아이디</label><input type="text" class="lgi" style="margin-top: 1%; margin-left: 5%;">
+            <lebel for="password" style="margin-left: 2%; font-size: 80%;">패스워드</lebel><input type="password" class="lgi" style="margin-top: 1%; margin-left: 5%;">
         </div>
-        <div>
-            <button type="button" onclick="location.href='./member.html'" style="margin-top: 5%; margin-left: 10%; padding-left: 7%; padding-right: 7%;">회원가입</button>
-            <h6 style="float: right; margin-top: 7%; font-size: 2%; font-family:Arial, Helvetica, sans-serif; margin-right: 2%;">아이디/비밀번호 찾기</h6>
+        <div id="loginformbox">
+            <div class="member" onclick="location.href='./member.html'">회원가입</div>
+            <div class="member">아이디/비밀번호 찾기</div>
+            <!-- style="margin-top: 5%; margin-left: 1%; font-size: 75%; padding-left: 7%;"
+            style="float: right; margin-top: 5%; font-size: 75%; font-family:Arial, Helvetica, sans-serif; margin-right: 2%"; -->
         </div>
     </div>
-    <h4 style="float: right; margin-right: 27%;color: gray; font-size: 50%;"><u>교육과정</u></h4>
+
+    <!-- <h4 style="float: right; color: gray; font-size: 100%;"><u>교육과정</u></h4> -->
     <h1 class="curriC">Curriculum</h1>
     <div class="sugangAll">
         <hr style="margin-bottom: 5%">
@@ -52,9 +57,9 @@
                 <h2>블록체인 기본과정1</h2>
                 <p></p>
                 <h5 class="textsiz">기간 : 3개월</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">시간 : 09:00 ~ 15:30</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">강의날짜 : 월~목</h5>
-                <button type="button" class="Buto" id="pushDe" onclick="pushSi(this)">수강신청</button>
+                <h5 class="textsiz">시간 : 09:00 ~ 15:30</h5>
+                <h5 class="textsiz">강의날짜 : 월~목</h5>
+                <button type="button" class="Buto" onclick="pushSi(this)">수강신청</button>
         </div>
         <hr>
         <div class="sugang">
@@ -62,9 +67,9 @@
                 <h2>블록체인  기본과정2</h2>
                 <p></p>
                 <h5 class="textsiz">기간 : 5개월</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">시간 : 16:00 ~ 22:00</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">강의날짜 : 월~목</h5>
-                <button type="button" class="Buto" id="pushDe" onclick="pushSi(this)">수강신청</button>
+                <h5 class="textsiz">시간 : 16:00 ~ 22:00</h5>
+                <h5 class="textsiz">강의날짜 : 월~목</h5>
+                <button type="button" class="Buto" onclick="pushSi(this)">수강신청</button>
             </span>
         </div>
         <hr>
@@ -73,9 +78,9 @@
                 <h2>블록체인  심화과정1</h2>
                 <p></p>
                 <h5 class="textsiz">기간 : 9개월</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">시간 : 09:00 ~ 17:30</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">강의날짜 : 화~금</h5>
-                <button type="button" class="Buto" id="pushDe" onclick="pushSi(this)">수강신청</button>
+                <h5 class="textsiz">시간 : 09:00 ~ 17:30</h5>
+                <h5 class="textsiz">강의날짜 : 화~금</h5>
+                <button type="button" class="Buto" onclick="pushSi(this)">수강신청</button>
         </div>
         <hr>
         <div class="sugang">
@@ -83,9 +88,9 @@
                 <h2>블록체인  심화과정2</h2>
                 <p></p>
                 <h5 class="textsiz">기간 : 6개월</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">시간 : 13:00 ~ 22:00</h5>
-                <h5 class="textsiz" style="margin-top: -3%;">강의날짜 : 화~금</h5>
-                <button type="button" class="Buto" id="pushDe" onclick="pushSi(this)">수강신청</button>
+                <h5 class="textsiz">시간 : 13:00 ~ 22:00</h5>
+                <h5 class="textsiz">강의날짜 : 화~금</h5>
+                <button type="button" class="Buto" onclick="pushSi(this)">수강신청</button>
         </div>
     </div>
 </a>
