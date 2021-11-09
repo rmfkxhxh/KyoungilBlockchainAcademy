@@ -16,16 +16,17 @@ body {
 #tel1 { /*button 형식의 tel mark*/
     position: absolute;
     width: 5%;
-    height: 6%;
-    right: 17%;
-    top: 6%;
+    height: auto    ;
+    right: 18%;
+    top: 5%;
 }
 
 #login{
     position: absolute;
     /* background-color: darkorchid; */
-    font-size: 130%;
-    right: 17%;
+    font-size: 100%;
+    right: 18%;
+    top: 0%;
     background-color: slateblue;
 }
 
@@ -39,7 +40,7 @@ body {
 #logo {
     width: 17%;
     position: absolute;
-    left: 17%;
+    left: 15%;
 }
 
 #divimg{
@@ -71,7 +72,7 @@ body {
 
 #main {
     margin-left: 17%;
-    margin-right: 17%;
+    margin-right: 18%;
     background-color: lightblue;
     height: 12%;
 }
@@ -108,7 +109,7 @@ body {
     /* border: 2px solid purple; */
     display: flex;
     position: absolute;
-    bottom: 15%;
+    top: 35%;
     left: 17%;
     justify-content: space-between;
 }
@@ -137,42 +138,43 @@ body {
 }
 
 
-#txt-container{
+/* #txt-container{
     width: 65%;
     height: 13%;
     position: absolute;
-    /* background-color: yellow; */
+    background-color: yellow;
     display: flex;
     bottom: 10%;
     left: 17%;
     text-align: center;
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: space-between;
 
 }
 .text {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     font-size: 120%;
     color: black;
     font-weight: 600;
     flex: auto;
-}
+} */
 
-#imtel{
+#imgtel{
     position: absolute;
     width: 5%;
-    height: 55%;
-    bottom: 15%;
-    left: 34.4%;
+    height: 30%;
+    bottom: 50%;
+    left: 34%; 
+    float: left;
 }
 #tel{
     float: bottom;
     width: 65%;
-    height: 10%;
+    height: 100px;
+    font-size: 1vw;
     position: fixed;
-    bottom: 5%;
+    bottom: 8%;
     text-align: center;
-    font-size: 81%;
     background-color: yellow;
     left: 17%;
     justify-content: center;
@@ -181,3 +183,11 @@ body {
 .img-container:hover {
     cursor: pointer;
 }
+
+/* #test {
+
+    position: absolute;
+    left: 32%;
+    bottom: -10%;
+    font-size: 3vw;
+} */
