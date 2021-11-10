@@ -2,32 +2,33 @@ body {
     overflow: auto;
 }
 
-#login:hover {
-    color: blue;
+#login-tag:hover {
+    color: grey;
 }
 
 .container{
     position: absolute;
-    background-color: white;
+    /* background-color: blue; */
     width: 99%;
     height: 100%;
+    background-image: url("../img/배경1.jpg");
 }
 
 #tel1 { /*button 형식의 tel mark*/
     position: absolute;
-    width: 5%;
-    height: auto    ;
+    width: 4%;
+    height: auto;
     right: 18%;
-    top: 5%;
+    top: 2%;
 }
 
-#login{
+#login-tag{
     position: absolute;
-    /* background-color: darkorchid; */
-    font-size: 100%;
-    right: 18%;
+    font-size: 1vx;
+    right: 22.5%;
     top: 0%;
-    background-color: slateblue;
+    cursor: pointer;
+    /* background-color: slateblue; */
 }
 
 #address {
@@ -40,7 +41,7 @@ body {
 #logo {
     width: 17%;
     position: absolute;
-    left: 15%;
+    left: 17%;
 }
 
 #divimg{
@@ -163,14 +164,14 @@ body {
     position: absolute;
     width: 5%;
     height: 30%;
-    bottom: 50%;
+    bottom: 44%;
     left: 34%; 
     float: left;
 }
 #tel{
     float: bottom;
     width: 65%;
-    height: 100px;
+    height: auto;;
     font-size: 1vw;
     position: fixed;
     bottom: 8%;
@@ -184,6 +185,89 @@ body {
     cursor: pointer;
 }
 
+#login {
+    left: 32%;
+    top: -20%;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+#id {
+    background-color: springgreen;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    margin-right: 1px;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    border: 1px solid black;
+}
+
+#pw {
+    /* padding-left: 3px; */
+    background-color: springgreen;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 2px;
+    padding-bottom: 3px;
+    border: 1px solid black;
+}
+
+#info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+
+
+#signup {
+    background-color: springgreen;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    /* margin-top: 10px;
+    margin-right: 70px; */
+}
+#autoLogin {
+    background-color: springgreen;
+    font-size: 14px;
+    /* margin-left: 20px;
+    margin-top: 10px; */
+}
+
+.input  {
+    margin-left: 15px;
+    width: 200px;
+    height: auto;
+}
+
+#checkbox {
+    cursor: pointer;
+}
+
+#check-button {
+    background-color: skyblue;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    cursor: pointer;
+}
+
+#check-button:hover {
+    font-weight: bold;
+}
 /* #test {
 
     position: absolute;

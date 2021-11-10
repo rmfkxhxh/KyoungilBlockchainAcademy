@@ -1,0 +1,22 @@
+#backgroundBox {
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+    margin-top: 50px;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+}
+
+#section1 {
+    background-color: coral;
+    text-align: center;
+}
+
+#section2 {
+    background-color: skyblue;
+}
+
+.inputbox {
+    margin-bottom: 10px;
+}
