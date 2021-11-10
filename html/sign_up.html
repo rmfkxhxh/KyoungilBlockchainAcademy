@@ -9,7 +9,7 @@
 <body>
   <header class="Heds">
     <nav>
-        <a href="homepage.html"> <img class="logo" src="../img/kba.png"></a>
+        <a href="homepage.html"> <img class="logo" src="../img/KYlogo.png"></a>
         <ul class="nav-container">
             <li class="nav-item"><a href="sisul.html">시설소개</a></li>
             <li class="nav-item"><a href="#">수강신청</a></li>
@@ -28,21 +28,21 @@
       <form name="login" action="index.html" method="post">
         아이디확인
         <div class="inputbox">
-          <input type="text" name="user_ID" placeholder="아이디 입력" >
-          <input type="button" name="user_IDcheck" value="아이디 확인">
+          <input type="text" id="user_id" name="user_ID" placeholder="아이디 입력" >
+          <input type="button" id="idbtn" name="user_IDcheck" value="아이디 확인">
         </div>
         비밀번호
         <div class="inputbox">
-          <input type="password" name="user_PW1" value="123456"><br>
+          <input type="password" id="password" name="user_PW1" placeholder="8자 이상의 영문조합">
         </div>
         비밀번호 재확인
         <div class="inputbox">
-          <input type="password" name="user_PW2" value="123456">
-          <input type="button" name="user_PWcheck" value="비밀번호 재확인">
+          <input type="password" id="passwordCheck" name="user_PW2" placeholder="********">
+          <input type="button" id="passwordChecker" name="user_PWcheck" value="비밀번호 재확인">
         </div>
         이름
         <div class="inputbox">
-          <input type="text" name="user_name" value="">
+          <input type="text" id="user_name" name="user_name" placeholder="박이삭">
         </div>
         생년월일
         <div class="inputbox">
@@ -107,33 +107,33 @@
         </div>
         성별
         <div class="inputbox">
+          <input type="radio" id="genderM" name="gender" value="m" id="man">
           <label for="man">남자</label>
-          <input type="radio" name="gender" value="m" id="man">
+          <input type="radio" id="genderF" name="gender" value="m" id="woman">
           <label for="woman">여자</label>
-          <input type="radio" name="gender" value="m" id="woman">
         </div>
         이메일
         <div class="inputbox">
-          <input type="email" name="user_email" placeholder="email@gmail.com">
+          <input type="email" id="user_email" name="user_email" placeholder="email@gmail.com">
         </div>       
         휴대전화
         <div class="inputbox">
-          <input type="text" name="user_phone" placeholder="010-****-****">
-          <input type="button" name="certification" value="인증번호 받기"><br>
-          <input type="text" name="certification" placeholder="인증번호를 입력하세요">
-          <input type="button" name="certification" value="확인">
+          <input type="text" id="user_phone" name="user_phone" placeholder="010-****-****">
+          <input type="button" id="certification" name="certification" value="인증번호 받기">
         </div>
+        <div class="inputbox">
+          <input type="text" id="certificationNum" name="certification" placeholder="인증번호를 입력하세요">
+          <input type="button" id="certificationNumChecker" name="certification" value="확인">
+        </div>
+        
         관심사
-        <div class="inputbox"></div>
-        <input type="checkbox" name="check" value="hobby1">IT
-        <input type="checkbox" name="check" value="hobby2">보안
-        <input type="checkbox" name="check" value="hobby3">웹
-        <input type="checkbox" name="check" value="hobby4">서버
-        본인 사진
-        <div class="inputbox"></div>
-        <input type="file" name="" value="">
-        <br><br><br>
-        <input type="submit" name="" value="제출">
+        <div class="inputbox">
+          <input type="checkbox" id="hobby1" name="check" value="hobby1">IT
+          <input type="checkbox" id="hobby2" name="check" value="hobby2">보안
+          <input type="checkbox" id="hobby3" name="check" value="hobby3">웹
+          <input type="checkbox" id="hobby4"name="check" value="hobby4">서버
+        </div>
+        <input type="submit" id="submit" name="" value="제출">
       </form>
     </section>
   

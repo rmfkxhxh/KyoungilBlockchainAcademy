@@ -38,10 +38,14 @@ body {
     font-size: 70%;
 }
 
-#logo {
-    width: 17%;
+#logobox{
+    /* background-color: lime; */
     position: absolute;
-    left: 17%;
+    width: 23%;
+    height: 100%;
+    background-image: url("../img/KYlogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #divimg{
@@ -51,37 +55,19 @@ body {
     /* background-color: tomato; */
 }
 
-#image { /* blockchain 사진있는곳*/
-    background: no-repeat;
-    width: 60%;
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-}
-
-/* #image {
-    background: no-repeat;
-    width: 80%;
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-} */
-
 #main {
     margin-left: 17%;
     margin-right: 18%;
-    background-color: lightblue;
+    position: absolute;
+    width: 100%;
+    /* background-color: lightblue; */
     height: 12%;
 }
 
 .img{ /*강의실 사진 있는 곳*/
     display: block;
     width: 99%;
-    height: 70%;
+    height: auto;
     /* margin-left: auto;
     margin-right: auto; */
     /* justify-content: flex-start; */
@@ -93,39 +79,30 @@ body {
     border-radius: 3%;
 }
 
-/* body {
-    background-image: url("./image1.png");
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-    background-color: rgba(241, 168, 10, 0.2);
-    overflow: scroll;
-} */
-
 #main-container {
     width: 65%;
-    height: 30%;
+    height: 50%;
     /* background-color: violet; */
     /* border: 2px solid purple; */
     display: flex;
     position: absolute;
-    top: 35%;
+    top: 20%;
     left: 17%;
     justify-content: space-between;
 }
 
-/* #main-container div:nth-of-type(1) {flex-grow: 1; background-color: red;}
-#main-container div:nth-of-type(2) {flex-grow: 1; background-color: orange;}
-#main-container div:nth-of-type(3) {flex-grow: 1; background-color: yellow;}
-#main-container div:nth-of-type(4) {flex-grow: 1; background-color: palegoldenrod;} */
-
 .img-container {
+    margin-top: 3%;
     width: 23%;
     height: 80%;
     /* background-color: yellow; */
     align-items: center; /*안에 내용물 가운데 정렬*/
     display: flex;
+    white-space: nowrap;
+    /* text-overflow: clip; */
+    font-size: 1.5vw;
+    /* text-align: justify;
+    text-justify: inter-word; */
     /* justify-content: space-between; */
 }
 
@@ -133,7 +110,7 @@ body {
     /* background-color: darkred; */
     width: 100%;
     text-align: center;
-    font-size: 120%;
+    /* font-size: 1vx; */
     color: black;
     font-weight: 600;
 }
@@ -187,7 +164,7 @@ body {
 
 #login {
     left: 32%;
-    top: -20%;
+    top: 10%;
     width: 300px;
     height: 200px;
     position: absolute;
@@ -221,14 +198,12 @@ body {
 #info {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     /* border: 2px solid black; */
     align-items: center;
     margin-top: 15px;
 
 }
-
-
 
 #signup {
     background-color: springgreen;
