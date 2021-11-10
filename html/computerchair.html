@@ -4,30 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Movie Seat Booking</title>
   </head>
   <body>
-    <div class="movie-container">
-      <label>Pick a class:</label>
-      <select id="movie">
-        <option value="10">블록체인</option>
-      </select>
-    </div>
-
     <ul class="showcase">
       <li>
-        <div class="seat"></div>
+        <div class="seat onclick="checkSeat()"></div>
         <small>N/A</small>
       </li>
 
       <li>
-        <div class="seat selected"></div>
+        <div class="seat selected" onclick="checkSeat()"></div>
         <small>Selected</small>
       </li>
 
       <li>
-        <div class="seat occupied"></div>
+        <div class="seat occupied" onclick="checkSeat()"></div>
         <small>Occupied</small>
       </li>
     </ul>

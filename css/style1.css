@@ -1,0 +1,158 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+/* body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+
+
+#movieg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 20%;
+    display: none;
+    /* background-color: violet; */
+}
+
+.seat {  
+    background-color: gray;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.row {
+    display: flex;
+}
+
+.movie-container {
+    position: absolute;
+    right: 25%;
+    top: 2%;
+    margin: 20px 0;
+    /* background-color: blue; */
+
+}
+
+/* 영화일시 셀렉박스 */
+.movie-container select{
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    /* 모양없음 */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.seat.selected {
+    background-color: blue;
+
+}
+
+.seat.occupied {
+    background-color: yellow;
+}
+
+.seat:nth-of-type(2) {
+    /* 왼쪽의 끝 부터 시작 */
+    margin-right: 18px;
+    /* 그래서 오른쪽 설정해야함 */
+}
+
+.seat:nth-last-of-type(2) {
+    /* 마지막부터 시작한다 */
+    margin-left: 18px;
+    /* 그래서 마지막 기준이니까 왼쪽으로 설정 */
+}
+
+.seat:not(.occupied):hover {
+    /* 시트 선책시 변환 */
+    cursor: pointer;
+    transform: scale(1.2);
+    /* 시트 커서올리시 크기 변경 */
+}
+
+.showcase .seat:not(.occupied):hover {
+    /* 점유되지 않은 객체들 */
+    cursor: default;
+    transform: scale(1.0);
+}
+
+.showcase {
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px, 10px;
+    border-radius: 5px ;
+    color: #7777;
+    list-style-type: none;
+    /* 해당점을제거 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small{
+    margin-left:10px ;
+    color: white;
+}
+
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+} 
+
+.container {
+    perspective: 1000px;
+    /* background-color: blueviolet; */
+    /* 3d화면처럼 볼수있다 */
+    margin-bottom: 5px;
+    position: absolute;
+    right: 35%;
+    bottom: 20%;
+}
+
+ p.text{
+    margin: 5px 0;
+}
+
+p.text span {
+    color: #6fe;
+}
+
+#submit { 
+    position: absolute;
+    width: 20%;
+    height: auto;
+    bottom: 8%;
+    left: 40%;
+    border-radius: 4px;
+    cursor: pointer;
+}
