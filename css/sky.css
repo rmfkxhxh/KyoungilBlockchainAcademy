@@ -1,0 +1,251 @@
+body {
+    overflow: auto;
+}
+
+#login-tag:hover {
+    color: grey;
+}
+
+.container{
+    position: absolute;
+    /* background-color: blue; */
+    width: 99%;
+    height: 100%;
+    background-image: url("../img/배경1.jpg");
+}
+
+#tel1 { /*button 형식의 tel mark*/
+    position: absolute;
+    width: 4%;
+    height: auto;
+    right: 18%;
+    top: 2%;
+}
+
+#login-tag{
+    position: absolute;
+    font-size: 1vx;
+    right: 22.5%;
+    top: 0%;
+    cursor: pointer;
+    /* background-color: slateblue; */
+}
+
+#address {
+    position: absolute;
+    right: 25%;
+    top: 0.2%;
+    font-size: 70%;
+}
+
+#logobox{
+    /* background-color: lime; */
+    position: absolute;
+    width: 23%;
+    height: 100%;
+    background-image: url("../img/KYlogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#divimg{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    /* background-color: tomato; */
+}
+
+#main {
+    margin-right: 17%;
+    position: absolute;
+    width: 100%;
+    /* background-color: lightblue; */
+    height: 12%;
+}
+
+.img{ /*강의실 사진 있는 곳*/
+    display: block;
+    width: 99%;
+    height: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* justify-content: flex-start; */
+    background-color: #1383ce;
+    opacity: 0.8;
+    border: 1px outset black;
+    top: 0%;
+    margin-bottom: 5%;
+    border-radius: 3%;
+}
+
+#main-container {
+    width: 65%;
+    height: 50%;
+    /* background-color: violet; */
+    /* border: 2px solid purple; */
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 17%;
+    justify-content: space-between;
+}
+
+.img-container {
+    margin-top: 3%;
+    width: 23%;
+    height: 80%;
+    /* background-color: yellow; */
+    align-items: center; /*안에 내용물 가운데 정렬*/
+    display: flex;
+    white-space: nowrap;
+    /* text-overflow: clip; */
+    font-size: 1.5vw;
+    /* text-align: justify;
+    text-justify: inter-word; */
+    /* justify-content: space-between; */
+}
+
+#test {
+    /* background-color: darkred; */
+    width: 100%;
+    text-align: center;
+    /* font-size: 1vx; */
+    color: black;
+    font-weight: 600;
+}
+
+
+/* #txt-container{
+    width: 65%;
+    height: 13%;
+    position: absolute;
+    background-color: yellow;
+    display: flex;
+    bottom: 10%;
+    left: 17%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.text {
+    border: 1px solid black;
+    font-size: 120%;
+    color: black;
+    font-weight: 600;
+    flex: auto;
+} */
+
+#imgtel{
+    position: absolute;
+    width: 5%;
+    height: 30%;
+    bottom: 44%;
+    left: 34%; 
+    float: left;
+}
+#tel{
+    float: bottom;
+    width: 65%;
+    height: auto;;
+    font-size: 1vw;
+    position: fixed;
+    bottom: 8%;
+    text-align: center;
+    background-color: yellow;
+    left: 17%;
+    justify-content: center;
+}
+
+.img-container:hover {
+    cursor: pointer;
+}
+
+#login {
+    left: 37.5%;
+    top: 25%;
+    width: 300px;
+    height: 200px;
+    position: sticky;
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+#id {
+    background-color: springgreen;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    margin-right: 1px;
+    margin-bottom: 5px;
+    margin-left: 1px;
+    border: 1px solid black;
+}
+
+#pw {
+    /* padding-left: 3px; */
+    background-color: springgreen;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 2px;
+    padding-bottom: 3px;
+    border: 1px solid black;
+}
+
+#info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* border: 2px solid black; */
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+#signup {
+    background-color: springgreen;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    /* margin-top: 10px;
+    margin-right: 70px; */
+}
+#autoLogin {
+    background-color: springgreen;
+    font-size: 14px;
+    /* margin-left: 20px;
+    margin-top: 10px; */
+}
+
+.input  {
+    margin-left: 15px;
+    width: 200px;
+    height: auto;
+}
+
+#checkbox {
+    cursor: pointer;
+}
+
+#check-button {
+    background-color: skyblue;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    cursor: pointer;
+}
+
+#check-button:hover {
+    font-weight: bold;
+}
+/* #test {
+
+    position: absolute;
+    left: 32%;
+    bottom: -10%;
+    font-size: 3vw;
+} */

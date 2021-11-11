@@ -1,0 +1,49 @@
+.blockChain {
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin-right: 10%;
+}
+.sugang {
+    width: 800px;
+    height: 199px;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    /* background-color: slateblue; */
+}
+
+.sugangAll { 
+    /* margin-left: 27%; */
+    width: 68%;
+    height: 1000px;
+    margin: auto;
+    margin-top: 2%;
+    margin-right: 5%;
+    /* background-color: springgreen; */
+}
+
+.textsiz {
+    font-size:90%;
+    color: rgb(92, 91, 91);
+    line-height: 80%;
+}
+
+.curriC {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    margin-left: 27%;
+    margin-top: 3%;
+    margin-bottom: -1%;
+    font-size: 200%;
+}
+
+.Buto {
+    background-color: thistle;
+    border: 2px solid gray;
+}
+
+.Buto:hover{
+    color: black;
+    cursor: pointer;
+}
