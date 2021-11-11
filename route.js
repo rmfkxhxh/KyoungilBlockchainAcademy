@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router()
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({extended: false}));
 
 router.get('/', (req, res) => { // app 대신 router에 연결
   res.sendFile(path.join(__dirname, 'html', 'homepage.html'));
@@ -23,19 +27,18 @@ router.get('/sisul', (req, res) => {
 });
 
 
-// router.get('/registration', (req, res) => {
+// router.get('/member', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'html', 'member.html'));
 // });
 
 
-//회원가입 data post
+// 회원가입 data post
 var db = require('./database');
-console.log('get member.html')
-app.get('/registration', function(req, res) {
-  res.render(path.join(__dirname, 'html', 'member.html'));
+
+router.get('/registration', function(req, res) {
+  res.sendFile(path.join(__dirname, 'html', 'member.html'));
 })
-console.log('render member.html')
-app.post('/form', urlencodedParser, function(req, res, next) {
+router.post('/form', urlencodedParser, function(req, res, next) {
   console.log('post form')
   
   // store all the user input data
@@ -44,7 +47,8 @@ app.post('/form', urlencodedParser, function(req, res, next) {
  
   // insert user data into users table
 
-  var sql = "INSERT INTO `users` (`idNumber`, `userId`, `userPwd`, `userName`, `userMail`) VALUES (NUll, 'userID', 'userPwd', 'userName', 'userMail')";
+  var sql = "INSERT INTO `registration` (`idNumber`, `userId`, `userPwd`, `userName`, `userMail`) VALUES (NULL, '" + req.body.userId + "', '" + req.body.userPwd + "', '" + req.body.userName + "', '" + req.body.userMail + "')";
+
   // <!-- userId, userPwd, userName, userMail  -->
   db.query(sql, req.body, function (err, data) { 
       if (err) throw err;
@@ -53,6 +57,7 @@ app.post('/form', urlencodedParser, function(req, res, next) {
   console.log('after post form')
   res.redirect('/');  // redirect to user form page after inserting the data -->홈으로
 }); 
+
 
 
 

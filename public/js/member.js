@@ -54,7 +54,7 @@ function checkPwd() {
   return true;
 }
 
-function checkAndSubmitForm() { 
+function checkAndSubmitForm(f) { 
   var nametxt = document.getElementById("user_name");
   var emailtxt = document.getElementById("user_email");
   var name = nametxt.value;
@@ -79,6 +79,6 @@ function checkAndSubmitForm() {
     return false;
   }
   alert("회원가입이 완료되었습니다.")
-  window.location.href = '/login.html';
+  window.location.href = '/login';
   return true;
 }

@@ -4,7 +4,7 @@ var conn = mysql.createConnection({
   user: 'root',      // Replace with your database username
   password: 'sqlpwd',      // Replace with your database password
   port: '3306',
-  database: 'test' // // Replace with your database Name
+  database: 'kba' // // Replace with your database Name
 });
 conn.connect(function(err) {
   if (err) throw err;
