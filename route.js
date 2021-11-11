@@ -15,7 +15,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/reserve', (req, res) => {
-  res.sendFile(path.join(__dirname, 'html', 'computerchair.html'));
+  res.sendFile(path.join(__dirname, 'html', 'calendar3.html'));
 });
 
 router.get('/sugang', (req, res) => {
