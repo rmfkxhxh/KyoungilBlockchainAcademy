@@ -1,5 +1,5 @@
 body {
-    overflow: auto;
+    overflow: hidden
 }
 
 #login-tag:hover {
@@ -9,9 +9,8 @@ body {
 .container{
     position: absolute;
     /* background-color: blue; */
-    width: 99%;
+    width: 100%;
     height: 100%;
-    background-image: url("../img/배경1.jpg");
 }
 
 #tel1 { /*button 형식의 tel mark*/
@@ -24,11 +23,10 @@ body {
 
 #login-tag{
     position: absolute;
-    font-size: 1vx;
-    right: 22.5%;
+    font-size: 0.9vx;
     top: 0%;
     cursor: pointer;
-    /* background-color: slateblue; */
+    background-color: slateblue;
 }
 
 #address {
@@ -43,6 +41,7 @@ body {
     position: absolute;
     width: 23%;
     height: 100%;
+    left: 17%;
     background-image: url("../img/KYlogo.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -56,16 +55,17 @@ body {
 }
 
 #main {
-    margin-right: 17%;
+    margin-left: 0%;
     position: absolute;
-    width: 100%;
+    width: 99%;
     /* background-color: lightblue; */
     height: 12%;
 }
 
 .img{ /*강의실 사진 있는 곳*/
-    display: block;
-    width: 99%;
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
     height: auto;
     /* margin-left: auto;
     margin-right: auto; */
@@ -80,19 +80,19 @@ body {
 
 #main-container {
     width: 65%;
-    height: 50%;
+    height: 40%;
     /* background-color: violet; */
     /* border: 2px solid purple; */
     display: flex;
     position: absolute;
     top: 20%;
     left: 17%;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .img-container {
     margin-top: 3%;
-    width: 23%;
+    width: 20%;
     height: 80%;
     /* background-color: yellow; */
     align-items: center; /*안에 내용물 가운데 정렬*/
@@ -100,19 +100,21 @@ body {
     white-space: nowrap;
     /* text-overflow: clip; */
     font-size: 1.5vw;
+    text-align: center;
+    font-weight: 600;
     /* text-align: justify;
     text-justify: inter-word; */
     /* justify-content: space-between; */
 }
 
-#test {
-    /* background-color: darkred; */
+/* #test {
+    background-color: darkred;
     width: 100%;
     text-align: center;
-    /* font-size: 1vx; */
+    font-size: 1vx;
     color: black;
     font-weight: 600;
-}
+} */
 
 
 /* #txt-container{
@@ -161,6 +163,10 @@ body {
     cursor: pointer;
 }
 
+#login-tag {
+    position: absolute;
+    right: 19%;
+}
 #login {
     left: 37.5%;
     top: 25%;

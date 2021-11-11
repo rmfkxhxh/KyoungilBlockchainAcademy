@@ -20,6 +20,7 @@ body {
     border: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    cursor: pointer;
 
 }
 
@@ -48,11 +49,13 @@ body {
 
 .seat.selected {
     background-color: blue;
+    cursor: pointer;
 
 }
 
 .seat.occupied {
     background-color: yellow;
+    cursor: pointer;
 }
 
 .seat:nth-of-type(2) {
