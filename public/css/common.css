@@ -1,0 +1,159 @@
+
+
+.login { /* 아이디 입력 박스*/
+    float: left;
+    width: 225px;
+    height: 100px;
+    border: 2px solid black;
+    margin-left: 255px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#loginbtn { /* 아이디 입력 박스*/
+    float: right;
+    margin-right: 2%;
+    margin-top: 1.5%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-color: lightskyblue;
+    border: 1px solid green;
+}
+
+#loginbtn:hover { /* 아이디 입력 박스*/
+    cursor: pointer;
+}
+
+#loginformbox { /* 아이디 입력 박스*/
+    display: flex;
+    justify-content: space-around;
+    font-size: 75%;
+    font-weight: 600;
+} 
+
+
+
+.member:hover { /* 아이디 입력 박스*/
+    color: blue;
+    cursor: pointer;
+}
+
+.lgi { /* 아이디 입력 박스*/
+    width: 80px;
+    margin: 5px;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.id {
+    margin-left: 8px;
+}
+
+#id {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#lgi {
+    margin-left: 22px;
+}
+
+.logo { /* 로고 */
+    margin-left: 250px; 
+    margin-top: 0px;
+    top: 0%;
+    display: block;
+    width: 260px;
+    height: 150px;
+    position: absolute;
+    border: 1px solid skyblue;
+    /* border: 2px solid black; */
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0; /*불필요한 공백 제거*/
+    padding: 0; /*불필요한 공백 제거*/
+    list-style-type: none; /*목록 기호 제거*/
+}
+
+.nav-item {
+    background-color: skyblue;
+    padding: 4%;
+    width: 25%;
+    text-align: center;
+    /* cursor: pointer; 커서모양 포인터로 함 */
+}
+
+.hei {
+    margin-top: -5px;
+}
+
+.nav-item a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item:hover { /*메뉴 공간*/
+    background-color: rgb(82, 184, 224);
+    cursor: pointer;
+}
+.nav-container { /*메뉴 공간*/
+    /* position:absolute;
+    top: 0; /* 상단위치를 0으로 
+    height: 17%;
+    left: 25%;
+    width: 70% */
+    float: left;
+    margin: 0 0 0 10em;
+    height: 148px;
+    width: 1050px;
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid black;
+    margin-right: 320px;
+    margin-bottom: 40px;
+    margin-top: -8px;
+    margin-left: 512px;
+}
+
+.nav-head {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-content {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Foot { /*푸터*/
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    color: gray;
+}
+
+.heds {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    vertical-align: top;
+    box-sizing: border-box;
+    border : 2px solid black;
+    height : 250px;
+    background-color: #333333
+}
