@@ -8,3 +8,4 @@ sisulintro.html
 img/bg.jpg
 .gitignore
 img/bg.png
+/node_modules/
