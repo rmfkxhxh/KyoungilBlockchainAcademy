@@ -40,9 +40,9 @@ const renderCalender = () => {
   const dates = prevDates.concat(thisDates, nextDates);
   const firstDateIndex = dates.indexOf(1);
   const lastDateIndex = dates.lastIndexOf(TLDate);
-  console.log(dates);
-  console.log(firstDateIndex);
-  console.log(lastDateIndex);
+  // console.log(dates);
+  // console.log(firstDateIndex);
+  // console.log(lastDateIndex);
   // Dates 정리
   dates.forEach((date, i) => {
           //   투명도 지정
@@ -98,7 +98,7 @@ const goToday = () => {
 let todayDate = new Date().getDate();
 let todayMonth = new Date().getMonth() + 1;
 let todayYear = new Date().getFullYear();
-console.log(todayDate, todayMonth, todayYear);
+// console.log(todayDate, todayMonth, todayYear);
 
 function checkDate(e){
     let checkDate = e.innerHTML;
@@ -123,14 +123,16 @@ function checkDate(e){
         else if (todayMonth == checkMonth && todayDate > tmp) alert("예약이 불가능합니다.");
         else if (todayMonth == checkMonth && todayDate+7 > tmp) {
           visible();
-          createSeat();
-          // getDB(checkYear, checkMonth, tmp)
+          let arr = pickOccupiedSeat();
+          getDB(checkYear, checkMonth, tmp, arr);
+          createSeat(arr);
           //console.log(pickOccupiedSeat());
         } 
         else if (todayMonth+1 == checkMonth && todayDate+7-new Date(checkYear,checkMonth+1,checkDate).getDay()-1 > tmp) {
           visible();
-          createSeat();
-          // getDB(checkYear, checkMonth, tmp);
+          let arr = pickOccupiedSeat();
+          getDB(checkYear, checkMonth, tmp, arr);
+          createSeat(arr);
           //console.log(pickOccupiedSeat());
         }
         else alert("예약은 1주까지 가능합니다.")
@@ -162,7 +164,7 @@ function checkDate(e){
 // }
 
 const container = document.querySelector(' .container');
-const seats = document.querySelectorAll(' .row .seat');
+let seats = document.querySelectorAll(' .row .seat');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
@@ -177,17 +179,6 @@ const movieSelect = document.getElementById('movie');
 // }
 
 // // update total and count
-
-//Occupied seats의 index를 가지고 오는 함수
-function getOccSeatsIndex() {
-  const occupiedSeats = document.querySelectorAll('.row .seat.occupied');
-  console.log(occupiedSeats);
-  const occSeatsIndex = [...occupiedSeats].map((seat) => [...seats].indexOf(seat));
-  // localStorage.setItem('occupiedSeats', JSON.stringify(occSeatsIndex));
-  console.log("Occupied seat index: " + occSeatsIndex);
-  //occSeatsIndex: occupied 좌석의 인덱스를 담은 배열
-  return occSeatsIndex;
-}
 
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
@@ -279,6 +270,17 @@ function pickOccupiedSeat(){
   return occNumArr;
 }
 
+//Occupied seats의 index를 가지고 오는 함수
+function getOccSeatsIndex() {
+  const occupiedSeats = document.querySelectorAll('.row .seat.occupied');
+  console.log(occupiedSeats);
+  const occSeatsIndex = [...occupiedSeats].map((seat) => [...seats].indexOf(seat));
+  // localStorage.setItem('occupiedSeats', JSON.stringify(occSeatsIndex));
+  console.log("Occupied seat index: " + occSeatsIndex);
+  //occSeatsIndex: occupied 좌석의 인덱스를 담은 배열
+  return occSeatsIndex;
+}
+
 //Movie option의 value값을 리턴
 function getOptionValue() {
   let s = document.getElementById("movie");
@@ -287,27 +289,27 @@ function getOptionValue() {
   return selectOptionValue;
 }
 
-console.log(document.querySelectorAll('.row'));
+// console.log(document.querySelectorAll('.row'));
 
 
-function getDB(Y,M,D) {
+function getDB(Y,M,D, arr) {
   let yearMonthDay = [Y, M, D];
   let optionVal = getOptionValue();
-  let occupiedIndex = getOccSeatsIndex();
+  let occSeatArr = arr; //24자리 배열
 
   console.log(yearMonthDay);
   console.log(optionVal);
-  console.log(occupiedIndex);
+  console.log(occSeatArr);
 
   //db에서 가져온 정보가 null일 경우
-  createSeat();
-  getOccSeatsIndex(); //현재 OccSeat의 결과 
+  //createSeat();
+  //getOccSeatsIndex(); //현재 OccSeat의 결과 
 
 }
 
-function createSeat() {
-  let occupiedSeatIndex = pickOccupiedSeat(); //길이 24의 배열 -> 1: occupied, 0: n/a
-  console.log(occupiedSeatIndex);
+function createSeat(arr) {
+  let occupiedSeatIndex = arr; //길이 24의 배열 -> 1: occupied, 0: n/a
+  // console.log(occupiedSeatIndex);
 
   occupiedSeatIndex.forEach((val, index) => {
     let tmp = (val==0) ? "seat": "seat occupied"
@@ -321,7 +323,7 @@ function createSeat() {
     let str = "row" + i;
     // console.log(str);
     let divClassRow = document.getElementById(str);
-    // console.log(divClassRow);
+    console.log(divClassRow);
 
     let arr = new Array();
     for (let j=0; j<4; j++){
@@ -329,12 +331,11 @@ function createSeat() {
     }
     arr[3] += `</div>`;
     divClassRow.innerHTML = arr.join("");
-      
   }
-  // console.log(document.getElementsByClassName("row"));
+  console.log(document.getElementsByClassName("row"));
 }
-console.log(getOccSeatsIndex());
-  
+  console.log(getOccSeatsIndex());
+  console.log(document.querySelectorAll(' .row .seat'));
   // console.log(divClassRow);
 
   // let k = 0;
@@ -359,7 +360,11 @@ console.log(getOccSeatsIndex());
   //   dates[i] = `<div class="date" onclick="checkDate(${'this'})" name=${date}><span class="${condition}">${date}</span></div>`;
   // });
 
-  
-
-
   //null이 아닐 경우
+
+
+  // var fs = require('fs');
+  // eval(fs.readFileSync('calendar1.js', 'utf-8'));
+
+  // console.log(todayYear);
+
