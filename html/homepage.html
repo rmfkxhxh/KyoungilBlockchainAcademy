@@ -9,61 +9,52 @@
     <script src="./public/js/sky.js"></script>
     
 </head>
-<body>
-    <div class="container">
-        <div id="main">
-            <img id="logo" src="./public/img/KYlogo.png">
-            <!-- <a id="address">서울특별시 강동구 천호대로 995 금복빌딩 3,4층 경일게임아카데미</a> -->
-            <a id="login-tag" onclick="visible()"><b>로그인</b></a>
-            <img id="tel1" src="./public/img/tel1.png">
-        </div>
-    <!-- <form action="./로그인.html"> -->
-    <!-- 배경화면 이미지 주소 https://pixabay.com/  -->
-        <!-- <div type="button" id="home" onclick="location.href= './로그인.html'"><h1>홈페이지 바로가기</h1></div> -->
-        <!-- <div id="divimg"><img id="image" src="../img/image1.png"></div> -->
+<header></header>
+<body class="container">
+    <div id="main">
+        <div>
+            <img src="./public/img/KYlogo.png"  id="logobox">
+        <a id="login-tag" onclick="visible()"><b>로그인</b></a>
+        <!-- <img id="tel1" src="../img/tel1.png"> -->
+    </div>
+
+    <div>
+        
         <div id="main-container">
-            <!-- <p class="img-container"><img class="img" src="classroom2.png"></p>
-            <p class="img-container"><img class="img" src="course1.png"></p>
-            <p class="img-container"><img class="img" src="institution1.png"></p>
-            <p class="img-container"><img class="img" src="qustionaire.png"></p> -->
-            <div class="img-container">
-                <p id="test">
-                    <img class="img" onclick="document.location.href='/reserve'" src="./public/img/classroom2.png">자습실 좌석현황
-                </p>
-            </div>
-            <div class="img-container" onclick="document.location.href='/sugang'">
-                <p id="test">
-                    <img class="img" src="./public/img/course1.png">교육과정 및 수강신청
-                </p>
-            </div>
             <div class="img-container" onclick="document.location.href='/sisul'">
-                <p id="test">
+                <p class="test">
                     <img class="img" src="./public/img/institution1.png">시설소개
                 </p>
             </div>
-            <div class="img-container">
-                <p id="test">
-                    <img class="img" src="./public/img/qustionaire.png">자주 묻는 질문
+            <div class="img-container" onclick="document.location.href='/sugang'">
+                <p class="test">
+                    <img class="img" src="./public/img/course1.png">교육과정
                 </p>
             </div>
-            <div id="login">
-                <h2 style="text-align: center; background-color: coral; margin-top: 1px; margin-left: 1px; margin-right: 1px;">Login</h2>
-                <div id="id">id: <input type="text" id="text" class="input"></div>
-                <div id="pw">pw: <input type="password" id="password" class="input"></div>
-                <button id="check-button" onclick="checkLoginInfo(text.value, password.value)">로그인</button>
-                <div id="info">
-                    <div id="autoLogin"><input type="checkbox" id="checkbox">자동로그인</div>
-                    <div id="signup" onclick="document.location.href='/registration'">회원가입</div>
-                </div>
+            <div class="img-container">
+                <p class="test">
+                    <img class="img" onclick="document.location.href='/reserve'" src="./public/img/classroom2.png">자습실 좌석현황
+                </p>
+            </div>
+            <div class="img-container">
+                <p class="test">
+                    <img class="img" src="./public/img/qustionaire.png" onclick="document.location.href='/qna'"> 자주 묻는 질문
+                </p>
+            </div>
+    </div>
+        <div id="login">
+            <h2 style="text-align: center; background-color: coral; margin-top: 1px; margin-left: 1px; margin-right: 1px;">Login</h2>
+            <div id="id">id: <input type="text" id="text" class="input"></div>
+            <div id="pw">pw: <input type="password" id="password" class="input"></div>
+            <button id="check-button" onclick="checkLoginInfo(text.value, password.value)">로그인</button>
+            <div id="info">
+                <div id="signup" onclick="document.location.href='./member.html'">회원가입</div>
             </div>
         </div>
         <div id="tel">
-            <img id="imgtel" src="./public/img/tel.png"><h1 style=>02-479-4050</h1>
-            서울특별시 강동구 천호대로 995 금복빌딩 3,4층 경일게임아카데미
+            <!-- <img id="imgtel" src="../img/tel.png"> -->
+            서울특별시 지옥구 천국대로 1004 천사빌딩 2층 게임아카데미 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tell : 02-123-5678
         </div>
     </div>
-    <script>
-        // 서버에서 로그인 성공을 한 리다이렉션만 캐치해서 알러트 띄우기.
-    </script>
 </body>
 </html>

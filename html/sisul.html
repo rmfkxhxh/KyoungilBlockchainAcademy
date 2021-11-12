@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="./public/css/sisul.css">
+    <link rel="stylesheet" href="./public/css/sugang.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="./public/css/common.css">
     <script src="./public/js/sisul.js"></script>  
     <style>
         .nav-item:nth-child(1) {
@@ -16,30 +18,32 @@
 
 <body>
     <header></header>
-    <nav>
-        <a href="/"> <img class="logo" src="./public/img/kba.png"></a>
+    <div class="nav">
+        <a href="/homepage"> <img class="logo" src="./public/img/kba.png"></a>
         <ul class="nav-container">
-            <li class="nav-item"><a href="#">시설소개</a></li>
-            <li class="nav-item"><a href="/sugang">수강신청</a></li>
-            <li class="nav-item"><a href="/reserve">좌석예약</a></li>
-            <li class="nav-item"><a href="">QnA</a></li>
+            <li class="nav-item"><a href="#" class="hei">시설소개</a></li>
+            <li class="nav-item"><a href="/sugang" class="hei">수강신청</a></li>
+            <li class="nav-item"><a href="/reserve" class="hei">좌석예약</a></li>
+            <li class="nav-item"><a href="/qna" class="hei">QnA</a></li>
             <!-- <li class="nav-item"><a href="">목록5</a></li> -->
         </ul>
-    </nav>
+    </div>
 
     <section>
-        <div class="login">    
+        <!-- <div class="login">    
             <div>
-                <button type="button" onclick="location.href='/login'" style="float: right; margin-right: 5px; margin-top: 15px; padding-top: 15px; padding-bottom: 15px; background-color: lightskyblue;border: 1px solid green;">로그인</button>
-                <label for="id" style="margin-left: 5px; font-size: 14px;">아이디</label><input type="text" class="lgi" style="margin-top: 15px; margin-left: 19px;">
-                <lebel for="password" style="margin-left: 5px; font-size: 14px;">패스워드</lebel><input type="password" class="lgi">
+                <button type="button" id="loginbtn" onclick="location.href='./login.html'">로그인</button>
+                <p></p>
+                <label class="id" id="id" for="id" style="font-size:13px">아이디</label><input type="text" class="lgi" id="lgi">
+                <lebel class="id" for="password" style="font-size:13px">패스워드</lebel><input type="password" class="lgi">
             </div>
-            <div>
-                <button type="button" onclick="location.href='/registration'" style="margin-top: 10px; margin-left: 10px; padding-left: 25px; padding-right: 25px;">회원가입</button>
-                <h6 style="float: right; margin-top: 15px; font-size: 10px; font-family:Arial, Helvetica, sans-serif; margin-right: 5px;">아이디/비밀번호 찾기</h6>
+            <div id="loginformbox">
+                <div class="member" onclick="location.href='./member.html'">회원가입</div>
+            <div id="loginformbox">
+                <div class="member">아이디/비밀번호 찾기</div>
             </div>
         </div>
-
+    </div> -->
         <div id="slider">
             <div id="slider-wrapper">
                 <div class="slide">
@@ -75,7 +79,6 @@
                     <p class="caption">수업 5</p>
                 </div>
             </div>
-
             <div id="slider-nav">
                 <a href="#" data-slide="0">1</a>
                 <a href="#" data-slide="1">2</a>
@@ -85,8 +88,15 @@
                 <a href="#" data-slide="5">6</a>
                 <a href="#" data-slide="6">7</a>  
                 <a href="#" data-slide="7">8</a>
-        </div>
+            </div>
         </div>
     </section>
+    
+    <div>
+        <div class="FoOt">
+            <hr>
+        </div>
+        <a class="Foot">회사소개 ㆍ&nbsp;이용약관 ㆍ&nbsp;인재채용 ㆍ&nbsp;개인정보처리방침 ㆍ&nbsp;전체서비스 ㆍ&nbsp;회사정책</a>
+    </div>
 </body>
 </html>
