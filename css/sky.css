@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Gamja+Flower&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@100&display=swap");
+
 body {
-    overflow: hidden
+    overflow: hidden;
+    background-image:url("../img/최종수정본2.png");
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: 'Cute Font', cursive;
+    
+        
 }
 
 #login-tag:hover {
