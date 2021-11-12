@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="1"style="border: 0; width:100%"><tbody>
+        <td height="25" onclick="doDisplay1()" style="cursor:pointer; line-height:45px;">
+        <b><span style="color: #d0a560;">01</span> [문의]</b> Q) 몇 개월 과정인가요? <span style="color: #858585" size="1.5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◀ more</span>
+        </td>
+        
+        <!-- 회색줄 -->
+        <tr>
+            <td style="height:1 ; background-color: #d9d9d9"></td>
+        </tr>
+
+       
+        <table style="border:0 ; width:100%"><tbody><tr>
+            <td id="myDiv1" style="display: none;">
+                <br>
+        
+        이 과정은 9개월 과정입니다<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </td>
+    </td>
+    </tr></tbody></table>
+
+
+    <table id="2" style="border: 0; width:100%"><tbody>
+        <td height="25" onclick="doDisplay2()" style="cursor:pointer; line-height:45px;">
+        <b><span style="color: #d0a560;">02</span> [문의]</b> Q) 비전공자도 취업가능 한가요? <span style="color: #858585" size="1.5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◀ more</span>
+        </td>
+        
+        <!-- 회색줄 -->
+        <tr>
+            <td style="height:1 ; background-color: #d9d9d9"></td>
+        </tr>
+
+        
+        <table style="border:0 ; width:100%"><tbody><tr>
+            <td id="myDiv2" style="display: none;">
+                <br>
+        
+        쌉가능<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </td>
+    </td>
+    </tr></tbody></table>
+
+    <table id="3" style="border: 0; width:100%"><tbody>
+        <td height="25" onclick="doDisplay3()" style="cursor:pointer; line-height:45px;">
+        <b><span style="color: #d0a560;">03</span> [문의]</b> Q) 정말로 전액 무료인가요? <span style="color: #858585" size="1.5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◀ more</span>
+        </td>
+        
+        <!-- 회색줄 -->
+        <tr>
+            <td style="height:1 ; background-color: #d9d9d9"></td>
+        </tr>
+
+        
+        <table style="border:0 ; width:100%"><tbody><tr>
+        <td id="myDiv3" style="display: none;">
+                <br>
+        
+        네, 고용노동부에서 '국가기간전략산업직종훈련'으로 지정한 게임 교육 과정으로 전액 무료입니다. 또한 최대<br>
+        500만원의 훈련장려금이 국가 지원으로 지급됩니다. (매월 30~50만원씩 교통비와 식비로 연수비 지원, 교재도 무료<br>
+        지원) 보통의 게임 학원들은 자부담금이 높은 전액 유료에 가격도 높지만, 유료 학원에서 실시하는 국비 지원 과정<br>
+        의 경우는 전액 무료가 아닌 절반은 본인 부담, 절반은 국비 지원인 경우가 대부분 입니다.<br>
+        <br>
+        </td>
+    </td>
+    </tr></tbody></table>
+
+    <table id="4" style="border: 0; width:100%"><tbody>
+        <td height="25" onclick="doDisplay4()" style="cursor:pointer; line-height:45px;">
+        <b><span style="color: #d0a560;">04</span> [문의]</b> Q) 어떤 분들이 가르치시나요? <span style="color: #858585" size="1.5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◀ more</span>
+        </td>
+        
+        <!-- 회색줄 -->
+        <tr>
+            <td style="height:1 ; background-color: #d9d9d9"></td>
+        </tr>
+
+        
+        <table style="border:0 ; width:100%"><tbody><tr>
+        <td id="myDiv4" style="display: none;">
+        <br>
+        
+        이 사단 회장인 박이삭님회장님으로부터<br>
+        교무부장 서기영<br>
+        블록체인 강자 전민수<br>
+        그 외 박승재<br>
+        <br>
+        </td>
+    </td>
+    </tr></tbody></table>
+
+    <script>
+    function doDisplay1(){
+	var con = document.getElementById("myDiv1");
+    // var con = document.g(String(num)).getElementById('myDiv');
+	if(con.style.display=='none'){
+		con.style.display = 'block';
+	}else{
+		con.style.display = 'none';
+	}
+}
+    function doDisplay2(){
+	var con = document.getElementById("myDiv2");
+    // var con = document.g(String(num)).getElementById('myDiv');
+	if(con.style.display=='none'){
+		con.style.display = 'block';
+	}else{
+		con.style.display = 'none';
+	}
+}
+    function doDisplay3(){
+	var con = document.getElementById("myDiv3");
+    // var con = document.g(String(num)).getElementById('myDiv');
+	if(con.style.display=='none'){
+		con.style.display = 'block';
+	}else{
+		con.style.display = 'none';
+	}
+}
+    function doDisplay4(){
+	var con = document.getElementById("myDiv4");
+    // var con = document.g(String(num)).getElementById('myDiv');
+	if(con.style.display=='none'){
+		con.style.display = 'block';
+	}else{
+		con.style.display = 'none';
+	}
+}
+</script>
+</body>
+</html>
