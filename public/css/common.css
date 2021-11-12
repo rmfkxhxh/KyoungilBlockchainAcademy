@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .login { /* 아이디 입력 박스*/
@@ -8,12 +9,29 @@
     margin-left: 255px;
     margin-top: 15px;
     margin-right: 20px;
+=======
+header { /*헤더*/
+    height: 70px;
+}
+
+.login { /* 아이디 입력 박스*/
+    float: left;
+    width: 200px;
+    border: 2px solid black;
+    margin-left: 9%;
+    margin-top: 4%;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
 }
 
 #loginbtn { /* 아이디 입력 박스*/
     float: right;
+<<<<<<< HEAD
     margin-right: 2%;
     margin-top: 1.5%;
+=======
+    margin-right: 4%;
+    margin-top: 15%;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
     padding-top: 6%;
     padding-bottom: 6%;
     background-color: lightskyblue;
@@ -29,9 +47,18 @@
     justify-content: space-around;
     font-size: 75%;
     font-weight: 600;
+<<<<<<< HEAD
 } 
 
 
+=======
+}
+
+#id, #pw { /* 아이디 입력 박스*/
+    margin-left: 3%;
+    font-size: 80%;
+}
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
 
 .member:hover { /* 아이디 입력 박스*/
     color: blue;
@@ -39,12 +66,17 @@
 }
 
 .lgi { /* 아이디 입력 박스*/
+<<<<<<< HEAD
     width: 80px;
+=======
+    width: 100px;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
     margin: 5px;
     margin-top: 1%;
     margin-left: 5%;
 }
 
+<<<<<<< HEAD
 .id {
     margin-left: 8px;
 }
@@ -66,21 +98,42 @@
     width: 260px;
     height: 150px;
     position: absolute;
+=======
+.logo { /* 로고 */
+    margin-left: 4%; 
+    margin-right: 10%;
+    top: 0%;
+    display: block;
+    height: 15%;
+    width: auto;
+    position: fixed;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
     border: 1px solid skyblue;
     /* border: 2px solid black; */
 }
 
 .nav-container {
+<<<<<<< HEAD
     display: flex;
+=======
+    position: fixed;
+    margin-left: 200px;
+    height: 15%;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
     flex-direction: row;
     margin: 0; /*불필요한 공백 제거*/
     padding: 0; /*불필요한 공백 제거*/
     list-style-type: none; /*목록 기호 제거*/
+<<<<<<< HEAD
+=======
+    font-size: 2.5vh;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
 }
 
 .nav-item {
     background-color: skyblue;
     padding: 4%;
+<<<<<<< HEAD
     width: 25%;
     text-align: center;
     /* cursor: pointer; 커서모양 포인터로 함 */
@@ -90,6 +143,14 @@
     margin-top: -5px;
 }
 
+=======
+    width: 16%;
+    height: auto;
+    text-align: center;
+    font-size: 120%;
+    /* cursor: pointer; 커서모양 포인터로 함 */
+}
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
 .nav-item a {
     text-align: center;
     text-decoration: none;
@@ -101,6 +162,7 @@
     cursor: pointer;
 }
 .nav-container { /*메뉴 공간*/
+<<<<<<< HEAD
     /* position:absolute;
     top: 0; /* 상단위치를 0으로 
     height: 17%;
@@ -156,4 +218,19 @@ li a {
     border : 2px solid black;
     height : 250px;
     background-color: #333333
+=======
+    position:absolute;
+    top: 0; /* 상단위치를 0으로 */
+    height: 17%;
+    left: 25%;
+    width: 70%
+}
+
+.Foot { /*푸터*/
+    font-size: 80%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+    color: gray;
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
 }

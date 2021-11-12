@@ -4,110 +4,108 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/calendar1.css" type="text/css">
-  <link rel="stylesheet" href="../css/style1.css" type="text/css">
+  <link rel="stylesheet" href="../public/css/calendar1.css">
+  <link rel="stylesheet" href="../public/css/style1.css" />
   <title>MHDP Full Calendar</title>
   
 </head>
 <body>
-        <div class="calendar">
-            <div class="header">
-              <div class="year-month"></div>
-              <div class="nav">
-                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
-                <button class="nav-btn go-today" onclick="goToday()">Today</button>
-                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
-              </div>
-            </div>
-            <div class="main">
-              <div class="days">
-                <div class="day">일</div>
-                <div class="day">월</div>
-                <div class="day">화</div>
-                <div class="day">수</div>
-                <div class="day">목</div>
-                <div class="day">금</div>
-                <div class="day">토</div>
-              </div>
-              <div class="dates"></div>
-            </div>
+    <div class="calendar">
+      <div class="header">
+        <div class="year-month"></div>
+          <div class="nav">
+            <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+            <button class="nav-btn go-today" onclick="goToday()">Today</button>
+            <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+          </div>
         </div>
-        <script src="../js/calendar1.js"></script>
+        <div class="main">
+          <div class="days">
+            <div class="day">일</div>
+            <div class="day">월</div>
+            <div class="day">화</div>
+            <div class="day">수</div>
+            <div class="day">목</div>
+            <div class="day">금</div>
+            <div class="day">토</div>
+          </div>
+          <div class="dates"></div>
+        </div>
+    </div>
           
-        <div id="movieg">
-            <div class="movie-container">
-                <label style="color: white;">Pick a class:</label>
-                <select id="movie">
-                <option value="1">501호</option>
-                <option value="2">502호</option>
-                <option value="3">401호</option>
-                <option value="4">402호</option>
-                </select>
-            </div>
-            
-            <ul class="showcase">
-                <li>
-                  <div class="seat"></div>
-                  <small>N/A</small>
-                </li>
-            
-                <li>
-                  <div class="seat selected"></div>
-                  <small>Selected</small>
-                </li>
-            
-                <li>
-                  <div class="seat occupied"></div>
-                  <small>Occupied</small>
-                </li>
-            </ul>
-            
-            <div class="container">
-                <div class="screen"></div>
-                <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                </div>
-                <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-                </div>
-            
-                <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                </div>
-            
-                <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                </div>
-            
-                <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-                </div>
-            
-                <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-                </div>
-            </div>
-            <button id="submit" onclick="checkSeat()"type="submit">submit</button>
-
+    <div id="movieg">
+        <div class="movie-container">
+            <label style="color: white;">Pick a class:</label>
+            <select id="movie" onclick="createSeat()">
+            <option>501호</option>
+            <option>502호</option>
+            <option>401호</option>
+            <option>402호</option>
+            </select>
         </div>
-        <script src="../js/script1.js"></script>
+        
+        <ul class="showcase">
+            <li>
+              <div class="seat"></div>
+              <small>N/A</small>
+            </li>
+        
+            <li>
+              <div class="seat selected"></div>
+              <small>Selected</small>
+            </li>
+        
+            <li>
+              <div class="seat occupied"></div>
+              <small>Occupied</small>
+            </li>
+        </ul>
+        
+        <div class="container">
+            <div class="screen"></div>
+            <div class="row" id="row0">
+              <!-- <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat" ></div> -->
+            </div>
+            <div class="row" id="row1">
+              <!-- <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat occupied" ></div>
+              <div class="seat occupied" ></div> -->
+            </div>
+        
+            <div class="row" id="row2">
+              <!-- <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat occupied" ></div> -->
+            </div>
+        
+            <div class="row" id="row3">
+              <!-- <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat" ></div> -->
+            </div>
+        
+            <div class="row" id="row4">
+              <!-- <div class="seat" ></div>
+              <div class="seat" ></div>
+              <div class="seat occupied" ></div>
+              <div class="seat occupied" ></div> -->
+            </div>
+        
+            <div class="row" id="row5">
+              <!-- <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat occupied"></div>
+              <div class="seat"></div> -->
+            </div>
+        </div>
+        <button id="submit" onclick="checkSeat()"type="submit">submit</button>
+    </div>
+    <script src="../public/js/calendar1.js"></script>
 </body>
 </html>

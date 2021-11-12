@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 img/play.jpg
 img/prev.jpg
 img/prev.png
@@ -9,3 +10,10 @@ img/bg.jpg
 .gitignore
 img/bg.png
 /node_modules/
+=======
+/.vs/
+/.vscode/
+/node_modules/
+/practicedb/
+
+>>>>>>> 2f66d6cf0df84334437c87cf5bd3d5bf4374e2ac
