@@ -174,6 +174,17 @@ router.get('/homepage', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'homepage.html'));
 });
 
+router.get('/member', (req, res) => {
+  // if(req.session.loginData){
+  //   // res.send({loggedIn: true, loginData: req.session.loginData})
+  //   res.sendFile(path.join(__dirname, 'html', 'sisul.html'));
+  // }else{
+  //   // res.send({loggedIn: false})
+  //   res.sendFile(path.join(__dirname, 'html', 'sisul.html'));
+  // }
+  res.sendFile(path.join(__dirname, 'html', 'member.html'));
+});
+
 
 // // login-router.js 
 // var controller_main = require("./login-controller"); 
