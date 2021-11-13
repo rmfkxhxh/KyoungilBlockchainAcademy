@@ -3,12 +3,7 @@ const compression = require('compression');
 const cors = require('cors');
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static('public'));
 
 app.use('/', route);
 app.use(express.static(__dirname));

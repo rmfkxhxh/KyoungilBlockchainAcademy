@@ -368,3 +368,4 @@ function createSeat(arr) {
 
   // console.log(todayYear);
 
+// module.exports = pickOccupiedSeat();
