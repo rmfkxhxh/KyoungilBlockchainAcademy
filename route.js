@@ -96,9 +96,19 @@ router.post('/login', (req, res, next) => {
     res.redirect('/'); //로그인시도후 redirect url
   });
 
-router.get('/', (req, res) => { // app 대신 router에 연결
-  if(req.session.user !== undefined) { //session.user가 undefined가 아닐시
-  console.log("session.user : ",req.session.user)
+router.post('/seat', (req, res, next) => {
+    console.log("예약중")
+    param = [req.body.dataKey, req.body.dataVal];
+    var sql = "INSERT INTO `users` (`userNo`, `userId`, `userPwd`, `userName`, `userMail`) VALUES (NULL, '" + id + "', '" + hash + "', '" + name + "', '" + mail + "')";
+    console.log("param: ", param);
+    res.redirect('/reserve'); //좌석 예약 후 redirect url
+});
+
+
+
+router.get('/', (req, res) => {
+  if(req.session.user !== undefined) { //session.user가 존재한다면 = 로그인후
+  console.log("접속자 id:",req.session.user)
   return res.sendFile(path.join(__dirname, 'html', 'homepagelogin.html'));
   }
   else (res.sendFile(path.join(__dirname, 'html', 'homepage.html')));
