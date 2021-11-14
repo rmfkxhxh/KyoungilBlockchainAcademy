@@ -116,13 +116,14 @@ header {
     white-space: nowrap;
 }
 .step { color:aquamarine;
+    padding-left: 5px;
     margin-left: min(680px, 40%);
     margin-top: 200px;
     position: center;
     border: 2px solid black;
     width: 300px;
     height: 400px;
-    background: linear-gradient( to top, rgb(100, 207, 162),rgb(66, 130, 155),yellow,orange,red,green,blue,violet,aquamarine);
+    background: linear-gradient(to top, rgb(100, 207, 162),rgb(66, 130, 155),yellow,orange,red,green,blue,violet,aquamarine);
     /* margin: auto; */
 }
 

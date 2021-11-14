@@ -19,3 +19,4 @@ app.use((err, req, res, next) => { // 에러 처리 부분
 var port = 5500
 console.log('server.js listening at port', port)
 app.listen(port);
+

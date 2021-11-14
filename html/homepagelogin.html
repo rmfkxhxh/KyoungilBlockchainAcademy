@@ -12,9 +12,9 @@
 <body>
     <div class="container">
         <div id="main">
-            <div id="logobox">
-            </div>
-            <a id="login-tag" onclick="visible()"><b>로그인</b></a>
+            <div>
+                <img src="./public/img/KYlogo.png"  id="logobox">
+            <form action="/logout" method="post"><input id="login-tag" type="submit" value="로그아웃"></form>
         </div>
         <div id="main-container">
             <div class="img-container">
@@ -53,6 +53,65 @@
         <div id="tel">
             <img id="imgtel" src="./public/img/tel.png"><h1 style=>02-479-4050</h1>
             서울특별시 강동구 천호대로 995 금복빌딩 3,4층 경일게임아카데미
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="./public/css/sky.css" type="text/css">
+    <script src="./public/js/sky.js"></script>
+    
+</head>
+<header></header>
+<body class="container">
+    <div id="main">
+        <div>
+            <img src="./public/img/KYlogo.png"  id="logobox">
+        <form action="/logout" method="post"><input id="login-tag" type="submit" value="로그아웃"></form>
+        <!-- <img id="tel1" src="../img/tel1.png"> -->
+    </div>
+
+    <div>
+        
+        <div id="main-container">
+            <div class="img-container" onclick="document.location.href='/sisul'">
+                <p class="test">
+                    <img class="img" src="./public/img/institution1.png">시설소개
+                </p>
+            </div>
+            <div class="img-container" onclick="document.location.href='/sugang'">
+                <p class="test">
+                    <img class="img" src="./public/img/course1.png">교육과정
+                </p>
+            </div>
+            <div class="img-container">
+                <p class="test">
+                    <img class="img" onclick="document.location.href='/reserve'" src="./public/img/classroom2.png">자습실 좌석현황
+                </p>
+            </div>
+            <div class="img-container">
+                <p class="test">
+                    <img class="img" src="./public/img/qustionaire.png" onclick="document.location.href='/qna'"> 자주 묻는 질문
+                </p>
+            </div>
+    </div>
+
+        <div id="tel">
+            <!-- <img id="imgtel" src="../img/tel.png"> -->
+            서울특별시 지옥구 천국대로 1004 천사빌딩 2층 게임아카데미 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tell : 02-123-5678
         </div>
     </div>
 </body>
