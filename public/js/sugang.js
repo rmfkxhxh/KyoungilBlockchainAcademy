@@ -1,3 +1,5 @@
+// import {loginChecknum} from "./sky.js";
+console.log(g);
 let ref = document.location.href.split('/');
 let tmp = ref.pop();
 //s
@@ -11,18 +13,22 @@ else if (tmp=="sugang.html") document.getElementById("nav1").style.backgroundCol
 function pushSi(e) {
     // console.log(e.style.backgroundColor);
     // console.log(e.innerHTML);
-    var result = (e.innerHTML==="수강신청") ? confirm("수강신청 하시겠습니까?") : confirm("수강신청을 취소하시겠습니까?")
-    if(result){
-        if (e.innerHTML==="수강신청") {
-            e.style.backgroundColor = "red";
-            e.innerHTML = "신청취소";
-        }
+    // if (loginChecknum==1) {
+        var result = (e.innerHTML==="수강신청") ? confirm("수강신청 하시겠습니까?") : confirm("수강신청을 취소하시겠습니까?")
+        if(result){
+            if (e.innerHTML==="수강신청") {
+                e.style.backgroundColor = "red";
+                e.innerHTML = "신청취소";
+            }
 
-        else {
-            e.style.backgroundColor = "green";
-            e.innerHTML = "수강신청";
+            else {
+                e.style.backgroundColor = "green";
+                e.innerHTML = "수강신청";
+            }
         }
-    }
+    // }
+    // else {
+    //     alert("로그인이 필요한 서비스입니다.");
     // if(e.innerHTML === "수강신청") {
     //     window.alert("수강신청하시겠습니까?");
     //     e.style.backgroundColor = "red";

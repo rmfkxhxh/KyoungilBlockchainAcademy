@@ -76,7 +76,7 @@ function checkSeat(){
     var tmp = confirm("정말로 예약하시겠습니까?");
     if (tmp == true) {
       alert("예약되었습니다.");
-      document.location.href = "/reserve";
+      document.location.href = "./calendar3.html";
     }
   }
 

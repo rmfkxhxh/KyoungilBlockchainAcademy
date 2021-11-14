@@ -1,4 +1,4 @@
-// const { create } = require("yallist");
+
 
 let date = new Date();
 
@@ -170,31 +170,45 @@ function checkDate(e){
 //submit 눌렀을 때 실행
 function checkSeat(){
   const selectedSeats = updateSelectedCount();
+
   if (selectedSeats !== null && selectedSeats.length == 1) {
+    let date = [checkYear,checkMonth,checkDay];
+    let s = document.getElementById("movie");
+    let room = s.options[s.selectedIndex].innerHTML;
+    let dataKey = date.join("-")+"/"+room;
+    let test = ["401호", "402호", "501호", "502호"];
+    
+    for (element of test){
+      if (localStorage.getItem(date.join("-")+"/"+element)==null) break;
+      else if (localStorage.getItem(date.join("-")+"/"+element).includes("2")){
+        alert(element + "에 좌석이 있습니다.");
+        document.location.href = "./calendar3.html";
+        return;
+      } 
+    }
     var tmp = confirm("정말로 예약하시겠습니까?");
     if (tmp == true) {
       console.log(selectedSeats[0]);
-      let date = [checkYear,checkMonth,checkDay];
-      let s = document.getElementById("movie");
-      let room = s.options[s.selectedIndex].innerHTML;
-      let dataKey = date.join("-")+"/"+room;
-      console.log("dataKey:  ", dataKey);
-      // console.log("local_storage dataKey:  ", localStorage.getItem(dataKey));
+      console.log(dataKey);
+      console.log(localStorage.getItem(dataKey));
       let dataVal = localStorage.getItem(dataKey).split('/');
-      dataVal[selectedSeats[0]] = "1";
-      console.log("dataVal: ", dataVal);
+      // dataVal[selectedSeats[0]] = "1";
+      dataVal[selectedSeats[0]] = "2";
+      console.log(dataVal);
       localStorage.setItem(dataKey, dataVal.join("/"));
 
       // let userData = localStorage.getItem()
       //selectedSeats[0]
       alert("예약되었습니다.");
       //db에 정보 전송 후 업데이트
+      
       var dataKeynode = document.getElementById('dataKey');
       dataKeynode.value = dataKey;
       var dataValnode = document.getElementById('dataVal');
       dataValnode.value = dataVal;
-
-      // document.location.href = "/reserve";
+      var seatNum = selectedSeats[0];
+      console.log("예약좌석",seatNum+1);
+      document.location.href = "/seat";
     }
   }
 
@@ -293,7 +307,11 @@ function createSeat(dateARR, roomNum, arr) {
   }
 
   occupiedSeatIndex.forEach((val, index) => {
-    let tmp = (val=="0") ? "seat": "seat occupied"
+    // let tmp = (val=="0") ? "seat": "seat occupied"
+    let tmp = "";
+    if (val=="0") tmp = "seat";
+    else if (val=="1") tmp = "seat occupied";
+    else tmp = "seat Mine";
     occupiedSeatIndex[index] = `<div class='${tmp}'></div>`;
   });
   let divClassRow = document.querySelectorAll(".row");

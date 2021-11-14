@@ -6,9 +6,12 @@ const bcrypt = require('bcrypt-nodejs');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const { response } = require('express');
 const mySqlStore = require("express-mysql-session")(session);
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+//jquey 사용
+router.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 //쿠키 & session
 const options = {
   host: 'localhost', // Replace with your host name
@@ -96,19 +99,58 @@ router.post('/login', (req, res, next) => {
     res.redirect('/'); //로그인시도후 redirect url
   });
 
+
 router.post('/seat', (req, res, next) => {
-    console.log("예약중")
-    param = [req.body.dataKey, req.body.dataVal];
-    var sql = "INSERT INTO `users` (`userNo`, `userId`, `userPwd`, `userName`, `userMail`) VALUES (NULL, '" + id + "', '" + hash + "', '" + name + "', '" + mail + "')";
-    console.log("param: ", param);
+    console.log("예약중");
+    console.log(req.session.seat);
+    if (req.session.seat == undefined){
+      var paramseat = [req.body.dataKey, req.body.dataVal, req.body.seatNum];
+      var seats = `'${paramseat[1]}'`
+      seatNo = req.body.seatNum
+      db.query(`SELECT * FROM seats WHERE dataKey='${paramseat[0]}' AND userId='${req.session.user}'`, (err, row) => { 
+        console.log('예약일:', paramseat[0])
+        console.log('예약자:', paramseat[1])
+        // console.log('예약좌석번호:', paramseat[3])
+        
+        if(err) {
+          console.log(paramseat[0]);
+          console.log(err);
+        }
+        if(row.length > 0) {
+          console.log(row);
+          row[1] = req.session.user;
+          row[2] = req.body.dataVal;
+          
+        }
+        else {
+          db.query(`INSERT INTO seats VALUES ("${paramseat[0]}", '${req.session.user}', ${seats})`);
+        }
+      })
+      console.log("예약 완료.");
+      req.session.seat = req.session.user + seats
+      var responseData = {}
+      responseData.result = '성공'
+      // res.json(responseData)
+      // console.log("res", res.json(responseData))
+    }
+    else {
+      console.log("예약 내용이 이미 존재합니다.", req.session.seat)
+      var responseData = {}
+      responseData.result = '실패'
+      // res.json(responseData)
+      // console.log("res", res.json(responseData))
+    }
+    
     res.redirect('/reserve'); //좌석 예약 후 redirect url
-});
+  });
+      
+//     console.log("param: ", paramseat);
+    
+// });
 
-
-
-router.get('/', (req, res) => {
-  if(req.session.user !== undefined) { //session.user가 존재한다면 = 로그인후
-  console.log("접속자 id:",req.session.user)
+router.get('/', (req, res) => { // app 대신 router에 연결
+  if(req.session.user !== undefined) { //session.user가 undefined가 아닐시
+  console.log("로그인 정보 : ",req.session.user)
   return res.sendFile(path.join(__dirname, 'html', 'homepagelogin.html'));
   }
   else (res.sendFile(path.join(__dirname, 'html', 'homepage.html')));
@@ -118,7 +160,7 @@ router.get('/reserve', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'calendar3.html'));
 });
 
-router.get('/sugang', (req, res) => {
+router.get('/course', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'sugang.html'));
 });
 
@@ -138,9 +180,15 @@ router.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'member.html'));
 });
 
+router.get('/seat', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'reserve.html'));
+});
+
 router.post('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/');
 });
-
+// router.get('/ajax', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'html', 'ajax.html'));
+// });
 module.exports = router; // 모듈로 만드는 부분
