@@ -4,14 +4,6 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
-// populateUI();
-// let ticketPrice = +movieSelect.value;
-
-// Save selected movie index and price
-// function setMovieData(movieIndex, moviePrice) {
-//   localStorage.setItem('selectedMovieIndex', movieIndex);
-//   localStorage.setItem('selectedMoviePrice', moviePrice);
-// }
 
 // // update total and count
 function updateSelectedCount() {
@@ -21,9 +13,6 @@ function updateSelectedCount() {
 
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
-//   //copy selected seats into arr
-//   // map through array
-//   //return new array of indexes
 
   const selectedSeatsCount = selectedSeats.length;
 
@@ -47,17 +36,8 @@ function populateUI() {
 
   const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
 
-//   if (selectedMovieIndex !== null) {
-//     movieSelect.selectedIndex = selectedMovieIndex;
-//   }
 }
 
-// Movie select event 얼마나 좌석을 선택했는지? 얼마나 가격을 질불해야하는지?
-// movieSelect.addEventListener('change', (e) => {
-//   ticketPrice = +e.target.value;
-//   setMovieData(e.target.selectedIndex, e.target.value);
-//   updateSelectedCount();
-// });
 
 // Seat click event
 container.addEventListener('click', (e) => {
