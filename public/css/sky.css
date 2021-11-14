@@ -2,10 +2,12 @@
 
 body {
     overflow: hidden;
-    /* background-image:url("../img/최종수정본2.png"); */
+    background-image:url("../img/최종수정본2.png");
     background-repeat: repeat;
-    /* background-size: cover; */
+    background-size: cover;
     font-family: 'Cute Font', cursive;
+    
+        
 }
 
 #login-tag:hover {
@@ -19,13 +21,21 @@ body {
     height: 100%;
 }
 
-/* #login-tag{
+#tel1 { /*button 형식의 tel mark*/
+    position: absolute;
+    width: 4%;
+    height: auto;
+    right: 18%;
+    top: 2%;
+}
+
+#login-tag{
     position: absolute;
     font-size: 0.9vx;
     top: 0%;
     cursor: pointer;
     background-color: slateblue;
-} */
+}
 
 #address {
     position: absolute;
@@ -86,17 +96,6 @@ body {
     top: 20%;
     left: 17%;
     justify-content: center;
-}
-
-#myPage {
-  position: absolute;
-  width: 15%;
-  height: auto;
-  top: 40%;
-  right: 19%;
-  text-align: right;
-  border: 1.5px solid green;
-  background-color: #1383ce;
 }
 
 .img-container {
@@ -172,20 +171,9 @@ body {
     cursor: pointer;
 }
 
-#logout-tag {
-    position: absolute;
-    font-size: 0.9vx;
-    top: 0%;
-    cursor: pointer;
-    right: 19%;
-}
-
 #login-tag {
     position: absolute;
-    font-size: 0.9vx;
-    top: 0%;
     right: 19%;
-    cursor: pointer;
 }
 #login {
     left: 37.5%;
@@ -215,7 +203,7 @@ body {
     background-color: springgreen;
     margin-left: 1px;
     margin-right: 1px;
-    padding-left: 5px;
+    padding-left: 2px;
     padding-bottom: 3px;
     border: 1px solid black;
 }
@@ -248,7 +236,6 @@ body {
 .input  {
     margin-left: 15px;
     width: 200px;
-    margin-top: 3px;
     height: auto;
 }
 

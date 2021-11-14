@@ -1,4 +1,4 @@
-/* 
+
 .head-container {
     width: 100%;
     margin: 0 auto;
@@ -46,18 +46,18 @@ background-color: #111111;
 /* .logo-header {
     background-color: yellow;
 } */
-/* .nav-container {
+.nav-container {
     display: flex;
     flex-direction: row;
-    width: 100%; */
-    /* margin: 0; 불필요한 공백 제거
-    padding: 0; 불필요한 공백 제거
+    width: 100%;
+    margin: 0; /*불필요한 공백 제거*/
+    padding: 0; /*불필요한 공백 제거*/
     background-color: skyblue;
-    list-style-type: none; 목록 기호 제거
+    list-style-type: none; /*목록 기호 제거*/
 }
 .nav-item {
     padding: 80px;
-    cursor: pointer; 커서모양 포인터로 함
+    cursor: pointer; /*커서모양 포인터로 함*/
 }
 .nav-item a {
     text-align: center;
@@ -72,13 +72,13 @@ background-color: #111111;
 }
 .nav-container {
     position: fixed;
-    top: 0; 상단위치를 0으로
+    top: 0; /* 상단위치를 0으로 */
     height: 150px;
     left: 250px;
 }
------------------------------nav-bar 끝---------------------------------
+/*-----------------------------nav-bar 끝---------------------------------*/
 header {
-    margin-top: 180px; 페이지의 맨위 메뉴가 header를 가리지 않도록함
+    margin-top: 180px; /*페이지의 맨위 메뉴가 header를 가리지 않도록함*/
 }
 
 .logo {
@@ -87,9 +87,9 @@ header {
     width: 250px;
     height: 150px;
     position: absolute;
-    border: 2px solid black;
-} */
-----------------------------------------login-----------------------------
+    /* border: 2px solid black; */
+}
+/*----------------------------------------login-----------------------------*/
 .login {
     width: 250px;
     height: 120px;
@@ -115,18 +115,13 @@ header {
     /* margin-left: 1%; */
     white-space: nowrap;
 }
-.step { color:aquamarine;
-    padding-left: 5px;
-    margin-left: min(680px, 40%);
-    margin-top: 200px;
+.step {
+    margin-left: 350px;
+    /* margin-left: 50%; */
     position: center;
     border: 2px solid black;
-    width: 300px;
-    height: 400px;
-    background: linear-gradient(to top, rgb(100, 207, 162),rgb(66, 130, 155),yellow,orange,red,green,blue,violet,aquamarine);
+    width: 350px;
+    height: 650px;
+    background-color: khaki;
     /* margin: auto; */
-}
-
-.sibal {
-    margin-left: 5px;
 }
